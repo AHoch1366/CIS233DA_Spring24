@@ -2,31 +2,23 @@ main {
  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
  color: #255322;  
  text-align: center;
- font-size: 2em;
+ font-size: xx-large;
 }
 
 
 footer{
     background-color: #255322;
     display: grid;
-    grid-template-columns: repeat (12, 1fr);
+    grid-template-columns: 75%, 25%;
 }
 
  .div-links {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    flex-basis: 75%;
-    font-size: 1em;
     font-family:'Times New Roman', Times, serif;
-    margin-right: 50px;
-    margin-left: 100px;
-}
-
-.div-links > div {
-    font-size: .6em;
-    margin-top: auto;
-    margin-bottom: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 a {
@@ -35,11 +27,6 @@ a {
     margin: 20px;  
 }
 
-.div-image {
-margin-right: 0px;
-margin-left: 50px;
-
-}
 
 .div-image img {
     max-width: 100%;
@@ -51,6 +38,6 @@ margin-left: 50px;
     list-style-type: none;
     display:flex;
     flex-wrap: wrap;
-    flex-direction: row;
+    
 }   
 
