@@ -9,18 +9,16 @@ main {
 footer{
     background-color: #255322;
     display: grid;
-    grid-template-columns: repeat (12, 1fr);
+    grid-template-columns: 75% 25%;
 }
 
  .div-links {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    flex-basis: 75%;
     font-size: 1em;
     font-family:'Times New Roman', Times, serif;
-    margin-right: 50px;
-    margin-left: 100px;
+  
 }
 
 .div-links > div {
@@ -35,16 +33,7 @@ a {
     margin: 20px;  
 }
 
-.div-image {
-margin-right: 0px;
-margin-left: 50px;
 
-}
-
-.div-image img {
-    max-width: 100%;
-    height: auto;
-}
 
 
 #social {
