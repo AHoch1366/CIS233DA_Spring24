@@ -1,7 +1,7 @@
 let gasLevel = 0;
-let tracLevel = 0;
+let tracLevel = 1;
 let battLevel = 0;
-let parkLevel = 0;
+let parkLevel = 1;
 
 showTime();
 
@@ -18,12 +18,12 @@ function getGas() {
 }
 
 function getTrac() {
-    if (tracLevel == 0){
-        tracLevel = 1;
+    if (tracLevel == 1){
+        tracLevel = 0;
         document.getElementById('trac').src = './assets/images/trac0.PNG';
         document.getElementById('bttn_trac').src = './assets/images/bttn_trac_1.PNG';
     } else {
-        tracLevel = 0;
+        tracLevel = 1;
         document.getElementById('trac').src = './assets/images/trac1.PNG';
         document.getElementById('bttn_trac').src = './assets/images/bttn_trac_0.PNG';
     }
@@ -40,13 +40,13 @@ function getBatt() {
     }
     }
 function getPark(){
-    if (parkLevel == 0) {
-        parkLevel = 1;
+    if (parkLevel == 1) {
+        parkLevel = 0;
         document.getElementById('brake').src = './assets/images/p1.PNG';
         document.getElementById('bttn_park').src = './assets/images/bttn_park_1.PNG';
     }
     else {
-        parkLevel = 0;
+        parkLevel = 1;
         document.getElementById('brake').src = './assets/images/p0.PNG';
         document.getElementById('bttn_park').src = './assets/images/bttn_park_0.PNG'
 
