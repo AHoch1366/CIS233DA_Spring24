@@ -16,17 +16,18 @@
     <img id="launch" src="./assets/images/lca0.PNG" alt="launch control indicator" />
     <div id="mode">PARK</div>
     <div id="temp">98 F&deg;</div>
-    <div id="time"></div>
+    <div id="time">ERROR BLAH BLAH</div>
     <img src="./assets/images/bttn_park_1.PNG" id="bttn_park" alt="parking brake button" onclick="getPark()">
     <img src="./assets/images/bttn_trac_1.PNG" id="bttn_trac" alt="traction control button" onclick="getTrac()">
     <img src="./assets/images/bttn_batt_0.PNG" id="bttn_batt" alt="charge battery button" onclick="getBatt()">
     <img src="./assets/images/bttn_gas_0.PNG" id="bttn_gas" alt="fill gas button" onclick="getGas()">
-    <img src="./assets/images/shifter.png" id="bttn_shifter" alt="moade shifter">
-    <img src="./assets/images/start.PNG" id="bttn_start" alt="start button">
+    <img src="./assets/images/shifter.png" id="bttn_shifter" alt="moade shifter" onclick="setMode()">
+    <img src="./assets/images/start.PNG" id="bttn_start" alt="start button" onclick="tryLaunch()">
     <div id="msg"></div>
 </body>
 <script src="./assets/scripts/clock.js"></script>
 <script src="./assets/scripts/functions.js"></script>
+<script src="./assets/scripts/launch.js"></script>
 </html>
 
 
