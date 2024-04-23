@@ -1,0 +1,135 @@
+
+/*Universal*/
+
+
+nav ul{
+    margin-left: -40px;
+    
+}
+
+nav li {
+    display: inline;
+    width: 100%;
+    font-size: 18px;
+    
+}
+
+a {
+    text-decoration: none;
+}
+
+
+a:hover {
+    color:rgb(255, 194, 102) !important;
+    text-decoration: none;
+}
+
+a:link {
+    color:rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+a:visited {
+    color: rgb(0,0,0);
+    text-decoration: none;
+}
+
+
+.nolink {
+    background-color: white;
+    padding: 5px;
+}
+
+
+h1 {
+    font-size: medium;
+    font-family: sans-serif;
+    color: rgb(0,0,0);
+    margin-bottom: 2px;
+}
+
+
+body {
+background-color: rgb(51, 153, 255);
+}
+
+
+
+option {
+    padding: 5px;
+    text-align: center;
+    
+}
+
+select {
+    width: 90vw;
+    height: 35vh;
+}
+
+
+#buttons {
+    display: block;
+    margin-top: 0px;
+}
+
+
+/* Classes page*/
+
+
+#listofclasses {
+    display: block;
+    width: 90vw;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 5px; 
+}
+
+
+/* Students page*/
+
+#class-selector {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#choice {
+    height: 5vh;
+    width: 90vw;
+}
+
+#student-selector {
+    display: block;
+    width: 90vw;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+
+
+/* Attendance page*/
+
+
+#class-selector-attendance {
+    display: block;
+    width: 25vw;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#choice-attendance {
+    height: 5vh;
+    width: 90vw;
+}
+
+
+#student-selector-checkbox {
+    display: block;
+    background-color: white;
+    width: 90vw;
+    height: auto;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
