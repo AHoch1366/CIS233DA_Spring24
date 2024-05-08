@@ -1,0 +1,181 @@
+
+
+body {
+background-color:#FAF9F6;
+font-family: sans-serif;
+color: #333333;
+}
+
+
+/*navigation elements*/
+#myNav {
+    background-color: #313638;
+    padding: 0px;
+    margin: 0px 0px 30px;
+    text-align:center;
+    color: #FAF9F6;
+    font-family:serif;
+    font-size: x-large;
+}
+
+#myNav ul {
+    list-style: none; 
+    padding: 0px; 
+    margin: 0px;
+}
+
+#myNav ul li {
+    display: inline-block; 
+    margin-right: 10px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#myNav ul li:last-child {
+    margin-right: 0; 
+}
+
+#myNav ul li:hover {
+    background-color: #FAF9F6;
+    color: #313638;
+}
+
+/*weather elements*/
+.weather-card {
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            padding: 10px 10px 0px 10px;
+            width: 30vw;
+            float: left;
+            color:midnightblue;
+            text-align: center;
+
+}
+
+/*paragraph elements*/
+
+#kyoto_Intro {
+    display: block;
+    color: red; 
+    font-size: x-large;
+    font-family:serif;
+}
+
+#prague_Intro {
+    display: block;
+    color: cornflowerblue;
+    font-size: x-large;
+    font-family:serif;
+}
+
+#sydney_Intro {
+    display: block;
+    color: green; 
+    font-size: x-large;
+    font-family:serif;
+}
+
+#montreal_Intro {
+    display: block;
+    color: purple; 
+    font-size: x-large;
+    font-family:serif;
+}
+
+#honolulu_Intro {
+    display: block;
+    color: orange; 
+    font-size: x-large;
+    font-family:serif;
+}
+
+
+#kyotoText,
+#pragueText,
+#sydneyText,
+#montrealText,
+#honoluluText {
+float: right;
+width: 30vw;
+margin-right: 5vw;
+text-align: left;
+padding: 20px;
+background-color: #F9F6EE;
+color:#313638;
+
+}
+
+
+/*image float elements*/
+
+#kyotoImages > #kyoto_skyline,
+#pragueImages > #prague_skyline,
+#sydneyImages > #sydney_skyline,
+#montrealImages > #montreal_skyline,
+#honoluluImages > #honolulu_skyline {
+    width: calc(100% - 7px); 
+    height: auto;
+    float: left;
+    clear: both; 
+}
+
+
+
+#kyotoImages,
+#pragueImages,
+#sydneyImages,
+#montrealImages,
+#honoluluImages {
+    width: 60vw;
+    float: left;
+}
+
+#kyotoImages img,
+#pragueImages img,
+#sydneyImages img,
+#montrealImages img,
+#honoluluImages img {
+    width: calc(50% - 4px); 
+    float: left; 
+    box-sizing: border-box; 
+    padding: 2px;
+}
+/*----------------------------------*/
+@media screen and (max-width: 428px) {
+   
+    #myNav ul li {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+}
+    
+    
+    #kyotoText,
+    #pragueText,
+    #sydneyText,
+    #montrealText,
+    #honoluluText {
+        float: none;
+        width: 95%; 
+        justify-content: center;
+    }
+
+    #kyotoImages,
+    #pragueImages,
+    #sydneyImages,
+    #montrealImages,
+    #honoluluImages {
+        width: 103%;
+        margin: 0 auto;
+        align-items: center;
+        justify-content: center;
+        
+    }
+
+    .weather-card {
+        width: 95%; 
+        margin: 0px 0 20px;
+        border-radius: 0px;
+        text-align: center;
+    }
+}
