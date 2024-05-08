@@ -147,7 +147,154 @@ With its warm climate, breathtaking scenery, and welcoming spirit of aloha, Hono
 <div id="prague-card" class="weather-card"></div>
 
 <!--weather api script for kyoto-->
+<script>
+    function fetchWeather(city) {
+        const apiKey = "014608e6aada48841e7e59a29d98569e";
+        const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                displayWeather(data);
+            })
+            .catch(error => {
+                console.log("Error fetching weather data:", error);
+            });
+    }
+
+    function displayWeather(data) {
+        const weatherContainer = document.getElementById("kyoto-card");
+
+        const cityName = document.createElement("h2");
+        cityName.textContent = data.name;
+
+        const weatherCondition = document.createElement("p");
+        weatherCondition.textContent = "Weather Condition: " + data.weather[0].main;
+
+        const weatherIcon = document.createElement("img");
+        weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+        weatherIcon.alt = "Weather Icon";
+
+        const seaLevel = document.createElement("p");
+        seaLevel.textContent = "Sea Level: " + (data.main.sea_level ? data.main.sea_level : "N/A");
+
+        const rainInches = document.createElement("p");
+        rainInches.textContent = "Rain (inches): " + (data.rain && data.rain["1h"] ? data.rain["1h"] : "N/A");
+
+        const windSpeed = document.createElement("p");
+        windSpeed.textContent = "Wind Speed: " + data.wind.speed;
+
+        weatherContainer.appendChild(cityName);
+        weatherContainer.appendChild(weatherIcon);
+        weatherContainer.appendChild(weatherCondition);
+        weatherContainer.appendChild(seaLevel);
+        weatherContainer.appendChild(rainInches);
+        weatherContainer.appendChild(windSpeed);
+    }
+
+    fetchWeather("Kyoto"); // Fetch weather for Kyoto
+</script>
+
+<!--weather api script for prague-->
+
+<script>
+function fetchWeather(city) {
+    const apiKey = "014608e6aada48841e7e59a29d98569e";
+    const url = `http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+    fetch(url)
+        .then(response => response.json())
+        .then(data => {
+            displayWeather(data);
+        })
+}
+
+function displayWeather(data) {
+    const weatherContainer = document.getElementById("prague-card");
+
+    const cityName = document.createElement("h2");
+    cityName.textContent = data.name;
+
+    const weatherCondition = document.createElement("p");
+    weatherCondition.textContent = "Weather Condition: " + data.weather[0].main;
+
+    const weatherIcon = document.createElement("img");
+    weatherIcon.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
+    weatherIcon.alt = "Weather Icon";
+
+    const seaLevel = document.createElement("p");
+    seaLevel.textContent = "Sea Level: " + (data.main.sea_level ? data.main.sea_level : "N/A");
+
+    const rainInches = document.createElement("p");
+    rainInches.textContent = "Rain (inches): " + (data.rain && data.rain["1h"] ? data.rain["1h"] : "N/A");
+
+    const windSpeed = document.createElement("p");
+    windSpeed.textContent = "Wind Speed: " + data.wind.speed;
+
+    weatherContainer.appendChild(cityName);
+    weatherContainer.appendChild(weatherIcon);
+    weatherContainer.appendChild(weatherCondition);
+    weatherContainer.appendChild(seaLevel);
+    weatherContainer.appendChild(rainInches);
+    weatherContainer.appendChild(windSpeed);
+}
+
+fetchWeather("Prague"); // Fetch weather for Prague
+</script>
+
+<!--hide image + text container based on the selected city-->
+
+<script>
+function swapCity(cityName){
+document.getElementById('kyotoImages').style.display = 'none';
+document.getElementById('kyotoText').style.display = 'none';
+document.getElementById('kyoto-card').style.display = 'none';
+    
+
+document.getElementById('pragueImages').style.display = 'none';
+document.getElementById('pragueText').style.display = 'none';
+document.getElementById('prague-card').style.display = 'none';
+
+
+document.getElementById('sydneyImages').style.display = 'none';
+document.getElementById('sydneyText').style.display = 'none';
+
+document.getElementById('montrealImages').style.display = 'none';
+document.getElementById('montrealText').style.display = 'none';
+
+document.getElementById('honoluluImages').style.display = 'none';
+document.getElementById('honoluluText').style.display = 'none';
+
+
+// Show image + text container based on the selected city
+switch (cityName) {
+    case 'kyoto':
+        document.getElementById('kyotoImages').style.display = 'block';
+        document.getElementById('kyotoText').style.display = 'block';
+        document.getElementById('kyoto-card').style.display = 'block';
+        break;
+    case 'prague':
+        document.getElementById('pragueImages').style.display = 'block';
+        document.getElementById('pragueText').style.display = 'block';
+        document.getElementById('prague-card').style.display = 'block';
+        break;
+    case 'sydney':
+        document.getElementById('sydneyImages').style.display = 'block';
+        document.getElementById('sydneyText').style.display = 'block';
+        break;
+    case 'montreal':
+        document.getElementById('montrealImages').style.display = 'block';
+        document.getElementById('montrealText').style.display = 'block';
+        break;
+    case 'honolulu':
+        document.getElementById('honoluluImages').style.display = 'block';
+        document.getElementById('honoluluText').style.display = 'block';
+        break;
+}
+}
+
+
+</script>
  <script>
 window.onload = function() {
     swapCity('kyoto'); 
