@@ -1,10 +1,8 @@
-
-
-body {
-background-color:#FAF9F6;
-font-family: sans-serif;
-color: #333333;
+@font-face {
+    font-family: 'Handlee';
+    src: url('fonts/Handlee-Regular.ttf') format('truetype')
 }
+
 
 
 /*navigation elements*/
@@ -14,7 +12,7 @@ color: #333333;
     margin: 0px 0px 30px;
     text-align:center;
     color: #FAF9F6;
-    font-family:serif;
+    font-family:'Handlee', serif;
     font-size: x-large;
 }
 
@@ -40,53 +38,19 @@ color: #333333;
     color: #313638;
 }
 
-/*weather elements*/
-.weather-card {
-            border: 2px solid #ccc;
-            border-radius: 5px;
-            padding: 10px 10px 0px 10px;
-            width: 30vw;
-            float: left;
-            color:midnightblue;
-            text-align: center;
 
-}
 
 /*paragraph elements*/
 
-#kyoto_Intro {
-    display: block;
-    color: red; 
-    font-size: x-large;
-    font-family:serif;
-}
-
-#prague_Intro {
-    display: block;
-    color: cornflowerblue;
-    font-size: x-large;
-    font-family:serif;
-}
-
-#sydney_Intro {
-    display: block;
-    color: green; 
-    font-size: x-large;
-    font-family:serif;
-}
-
-#montreal_Intro {
-    display: block;
-    color: purple; 
-    font-size: x-large;
-    font-family:serif;
-}
-
+#kyoto_Intro,
+#prague_Intro,
+#sydney_Intro,
+#montreal_Intro,
 #honolulu_Intro {
     display: block;
-    color: orange; 
+    color: #313638; 
     font-size: x-large;
-    font-family:serif;
+    font-family:'Handlee', sans-serif;
 }
 
 
@@ -119,7 +83,10 @@ color:#313638;
     clear: both; 
 }
 
-
+#images {
+    display: block;
+    width: 100vw;
+    } 
 
 #kyotoImages,
 #pragueImages,
@@ -140,42 +107,64 @@ color:#313638;
     box-sizing: border-box; 
     padding: 2px;
 }
+
+/*weather elements*/
+
+#weather-card {
+    width: 30vw;
+    float: right;
+    padding: 20px;
+    margin-right: 5vw;
+    text-align: center;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    color:#313638;
+    }
+
+
+
 /*----------------------------------*/
 @media screen and (max-width: 428px) {
-   
-    #myNav ul li {
-    display: block;
-    padding: 10px;
-    cursor: pointer;
-}
     
+    #myNav ul li {
+        display: block;
+        padding: 10px;
+        cursor: pointer;
+    }
+    #main {
+    width: 100%;
+    background-color: #F9F6EE;
+    }
     
     #kyotoText,
     #pragueText,
     #sydneyText,
     #montrealText,
     #honoluluText {
-        float: none;
-        width: 95%; 
-        justify-content: center;
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
+        width: 80%
+    }
+    
+    #images {
+        display: flex; 
+        justify-content: center; 
+        align-items: center; 
     }
 
-    #kyotoImages,
-    #pragueImages,
-    #sydneyImages,
-    #montrealImages,
-    #honoluluImages {
-        width: 103%;
-        margin: 0 auto;
-        align-items: center;
-        justify-content: center;
-        
+    #images > div {
+        width: 100%; 
     }
 
-    .weather-card {
-        width: 95%; 
-        margin: 0px 0 20px;
-        border-radius: 0px;
+
+    #weather-card {
+        width: calc(100% - 100px); 
         text-align: center;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        margin-left: 50px;
+        margin-top: 10px; 
+        color: #313638;
     }
 }
